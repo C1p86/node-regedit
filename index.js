@@ -192,7 +192,7 @@ function toCommandArgs(cmd, arch, keys) {
 	let result = baseCommand(cmd, arch)
 	if (typeof keys === 'string') {
 		result.push(keys)
-	} else if (util.isArray(keys)) {
+	} else if (Array.isArray(keys)) {
 		result = result.concat(keys)
 	} else {
 		debug('creating command without using keys %s', keys ? keys : '')
